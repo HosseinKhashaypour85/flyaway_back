@@ -23,6 +23,10 @@ const User = sequelize.define('users', {
     phone: {
         type: DataTypes.STRING,
         allowNull: true
+    },
+    wallet_count: {
+        type: DataTypes.BIGINT,
+        allowNull: false
     }
 }, {
     timestamps: false

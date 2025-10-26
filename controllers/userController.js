@@ -43,7 +43,7 @@ const createUser = async (req, res) => {
         if (existingUser) {
             return res.status(409).json({ msg: "اطلاعات وارد شده از  قبل ثبت شده اند" });
         }
-        const newUser = await User.create({ first_name, last_name, email, phone });
+        const newUser = await User.create({ first_name, last_name, email, phone , wallet_count });
 
         return res.status(201).json({
             msg: "کاربر با موفقیت ساخته شد !",
