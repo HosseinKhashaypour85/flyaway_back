@@ -2,7 +2,7 @@ const ipChecker = async (req, res) => {
     try {
         let userIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
         if (userIp === "::1" || userIp === "127.0.0.1") {
-            userIp = "8.8.8.8"; // IP تستی
+            userIp = "8.8.8.8";
         }
 
         const url = `http://ip-api.com/json/${userIp}`;
